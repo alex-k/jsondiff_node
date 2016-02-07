@@ -4,11 +4,6 @@ module.exports = {
 
 
 function diff(first, second) {
-    var ret = {}
-
-    console.log(second);
-    console.log(Array.isArray(second));
-    console.log(typeof second);
 
     if (Array.isArray(second)) {
         if (!Array.isArray(first)) {
@@ -17,6 +12,8 @@ function diff(first, second) {
             return second.filter((i) =>  first.indexOf(i) < 0);
         }
     }
+
+    var ret = {};
 
     for (var k in second) {
         var newVal = second[k];

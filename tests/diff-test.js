@@ -18,10 +18,10 @@ describe('jsondiff', function () {
             });
 
             it('should handle arrays', function () {
-                var first = {x: ["a", "b"]};
-                var second = {x: ["b", "c"]};
+                var first = ["a", "b"];
+                var second = ["b", "c"];
 
-                assert.equal(JSON.stringify({x:["c"]}), JSON.stringify(module.diff(first, second)));
+                assert.equal(JSON.stringify(["c"]), JSON.stringify(module.diff(first, second)));
             });
 
 
@@ -50,5 +50,8 @@ describe('jsondiff', function () {
             });
 
         });
+
+
     });
+
 });
