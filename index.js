@@ -5,8 +5,34 @@ logger.setLevel('INFO');
 logger.info("Application started");
 
 
-var first = {a: 1, b: 2, e: {a: 1}};
-var second = {b: 2, c: 3, e: {a: 2}};
+var first = {
+    "foo": {
+        "bar": "baz",
+        "biz": "foo"
+    },
+    "fiz": {
+        "foo": "baz"
+    },
+    "bar": "baz",
+    "baz": [
+        "foo",
+        "bar"
+    ]
+};
+
+var second={
+    "foo":{
+        "bar":"baz1",
+        "biz":"foo"
+    },
+    "fiz":{
+        "foo":"baz"
+    },
+    "bar":"baz",
+    "baz":[
+        "foo1"
+    ]
+};
 
 logger.info(first);
 logger.info(second);
